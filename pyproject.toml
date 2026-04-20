@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "classcheck"
+version = "0.0.1"
+description = "Automated classroom attendance via scheduled face recognition bursts"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "facestack>=0.1.0",
+    "sqlalchemy>=2.0",
+    "apscheduler>=3.10",
+    "opencv-contrib-python>=4.8",
+    "numpy>=1.24,<3",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.27",
+    "python-multipart>=0.0.9",
+]
+
+[project.scripts]
+classcheck-enroll = "classcheck.scripts.enroll:main"
+classcheck-check = "classcheck.scripts.check_now:main"
+classcheck-admin = "classcheck.scripts.admin:main"
+classcheck-scheduler = "classcheck.scheduler:main"
+classcheck-report = "classcheck.scripts.report:main"
+classcheck-api = "classcheck.api:main"
+
+[tool.setuptools.packages.find]
+include = ["classcheck*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

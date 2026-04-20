@@ -1,0 +1,55 @@
+# ----- Python -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+*.egg
+
+# ----- Virtual envs -----
+.venv/
+venv/
+env/
+
+# ----- Node / Next.js -----
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# ----- Local env / secrets -----
+.env
+.env.local
+.env.*.local
+web/.env.local
+
+# ----- SQLite databases (face embeddings — PII) -----
+*.db
+*.db-shm
+*.db-wal
+
+# ----- Per-user data -----
+snapshots/
+/data/
+
+# ----- IDE / OS -----
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ----- Git backup (local only) -----
+.git.backup/
+
+# ----- Planning / narrative / recording artefacts (personal, not public) -----
+PRODUCT_ORIGIN.md
+PROJECT_WALKTHROUGH.md
+COURSE_PLAN.md
+MASTERCLASS_SCRIPT.md
+DEMO_VIDEO_SCRIPT.md
+LESSON_*.md
+SESSION_*.md
